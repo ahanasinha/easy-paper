@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body background="img/bg1.jpeg">
+    <div style="float: left;"><img src="img/register.png" width="200"></div>
+    <div style="float: right;"><img src="img/logo.png" width="200"></div>
+    <div><center><h1>REGISTRATION</h1>
+    <form action="Register" method="post"><table>
+        <tr><td>USername *</td><td><input type="text" name="username" autocomplete="off" required placeholder="Enter username"></td></tr>
+        <tr><td>Name *</td><td><input type="text" name="name" autocomplete="off" required placeholder="Enter name"></td></tr>
+        <tr><td>Email *</td><td><input type="email" name="email" autocomplete="off" required placeholder="Enter email id"></td></tr>
+        <tr><td>Mobile Number *</td><td><input type="text" name="number" maxlength="10" pattern="[0-9]{10}" required placeholder="Enter mobile number"></td></tr>
+        <tr><td>Address *</td><td><TEXTAREA ROWS=3 COLS=20 NAME="address" required>Please Enter Your Address</TEXTAREA></td></tr>
+        <tr><td>Role *</td><td><select name="role"><option value="user">User</option><option value="admin">Admin</option></select></td></tr>
+        <tr><td>Password *</td><td><input type="password" name="password" required placeholder="Enter password"></td></tr>
+        <tr><td>Confirm Password *</td><td><input type="password" name="cpassword" required placeholder="Confirm password"></td></tr>
+        <tr><td><input type="submit" onclick="return checkpw(this.form)"></td><td><input type="reset"></td></tr>
+    </table></form>
+    <a href="index.html" target="_self"><div class="btn">Home</div></a>
+    </center>
+</body>
+<script>
+    function checkpw(form){
+        pw=form.password.value;
+        cpw=form.cpassword.value;
+        if(pw!=cpw){
+            alert("Password doesn't match!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
+</html>
